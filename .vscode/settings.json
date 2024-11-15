@@ -1,0 +1,8 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "pid_controller.h": "c",
+        "stdlib.h": "c",
+        "sgba.h": "c"
+    }
+}

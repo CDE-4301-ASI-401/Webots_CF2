@@ -73,6 +73,8 @@ int main(int argc, char **argv) {
   wb_gyro_enable(gyro, timestep);
   WbDeviceTag camera = wb_robot_get_device("camera");
   wb_camera_enable(camera, timestep);
+
+
   WbDeviceTag range_front = wb_robot_get_device("range_front");
   wb_distance_sensor_enable(range_front, timestep);
   WbDeviceTag range_left = wb_robot_get_device("range_left");

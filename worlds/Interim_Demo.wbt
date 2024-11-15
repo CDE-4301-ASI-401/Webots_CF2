@@ -1,0 +1,102 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/Crazyflie.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/solids/protos/SolidPipe.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.5797175280485066 0.5818955286090545 0.5703728442502485 2.101666959461013
+  position 3.3761678242747353 2.4003510762213005 12.029853826024768
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+  castShadows FALSE
+}
+RectangleArena {
+  translation 3 2.5 0
+  floorSize 6 5
+  floorTileSize 2 2
+  wallHeight 1
+}
+Wall {
+  translation 3.2 4.5 0
+  rotation 0 0 1 -1.5707953071795862
+  name "wall(3)"
+  size 1 0.01 1
+}
+Crazyflie {
+  translation 0.5 3.75 0.015
+  name "1"
+  controller "SGBA_Controller"
+}
+Crazyflie {
+  translation 0.5 1.25 0.015
+  name "3"
+  controller "SGBA_Controller"
+}
+Crazyflie {
+  translation 0.5 2.5 0.015
+  name "2"
+  controller "SGBA_Controller"
+}
+Wall {
+  translation 1 2.5 0
+  size 0.01 5 0.01
+}
+Wall {
+  translation 5.5 2 0
+  rotation 0 0 1 3.14159
+  name "wall(1)"
+  size 1 0.01 1
+}
+Wall {
+  translation 3.71 4 0
+  rotation 0 0 1 -5.307179586466759e-06
+  name "wall(2)"
+  size 1 0.01 1
+}
+SolidPipe {
+  translation 1.8 1.45 1
+  radius 0.15
+  thickness 0.999
+  appearance PBRAppearance {
+    roughness 0.5
+    metalness 0
+  }
+}
+SolidPipe {
+  translation 2.45 2.5 1
+  name "pipe(2)"
+  radius 0.15
+  thickness 0.999
+  appearance PBRAppearance {
+    roughness 0.5
+    metalness 0
+  }
+}
+SolidPipe {
+  translation 3.4 1.15 1
+  name "pipe(1)"
+  radius 0.15
+  thickness 0.999
+  appearance PBRAppearance {
+    roughness 0.5
+    metalness 0
+  }
+}
+SolidPipe {
+  translation 3.5 2.5 1
+  name "pipe(3)"
+  radius 0.15
+  thickness 0.999
+  appearance PBRAppearance {
+    roughness 0.5
+    metalness 0
+  }
+}
