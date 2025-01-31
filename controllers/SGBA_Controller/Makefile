@@ -35,7 +35,7 @@
 ###
 ### ---- C Sources ----
 ### if your program uses several C source files:
-C_SOURCES = SGBA_Controller.c SGBA.c wallfollowing_multiranger_onboard.c pid_controller.c
+C_SOURCES = SGBA_Controller.c SGBA.c wallfollowing_multiranger_onboard.c pid_controller.c 
 ###
 ### ---- C++ Sources ----
 ### if your program uses several C++ source files:

@@ -197,8 +197,7 @@ int SGBA_controller(float *vel_x, float *vel_y, float *vel_w, float *rssi_angle,
   //static float pos_x_move = 0;
   //static float pos_y_move = 0;
   static bool overwrite_and_reverse_direction = false;
-  static bool loop_detected = false;
-  // static float direction = 1;
+  static float direction = 1;
   static bool cannot_go_to_goal = false;
   static uint8_t prev_rssi = 150;
   static int diff_rssi = 0;
@@ -250,50 +249,26 @@ int SGBA_controller(float *vel_x, float *vel_y, float *vel_w, float *rssi_angle,
 
 // if looping is detected, reverse direction (only on outbound)
       if (overwrite_and_reverse_direction) {
-      // direction = -1.0f * direction;
-      // Method 1
-      // DEBUG_PRINT("SGBA_FORWARD: wanted angle = %.2f\n", (double)wanted_angle);
-        if (local_direction == 1) {
-          if (wanted_angle > 0) {
-            wanted_angle = 0;
-          } else {
-            wanted_angle = ((float)M_PI)/2;
-          }
-          // DEBUG_PRINT("even drone angle changed to = %.2f\n", (double)wanted_angle);
-        } 
-        else {
-          if (wanted_angle == 0) {
-            wanted_angle = -((float)M_PI)/2;
-          } else {
-            wanted_angle = 0;
-          }
-          // DEBUG_PRINT("odd drone angle changed to = %.2f\n", (double)wanted_angle);
-        }
-        // DEBUG_PRINT("wanted_angle changed to = %.2f\n", (double)wanted_angle);
+        //#ifdef DEBUG
+        printf("OVERWRITE AND REVERSE DIRECTION\n");
+        //#endif
+        direction = -1.0f * direction;
         overwrite_and_reverse_direction = false;
-        loop_detected = true;
-      } 
-      // if (overwrite_and_reverse_direction) {
-      //   //#ifdef DEBUG
-      //   printf("OVERWRITE AND REVERSE DIRECTION\n");
-      //   //#endif
-      //   direction = -1.0f * direction;
-      //   overwrite_and_reverse_direction = false;
-      // } else {
-      //   if (left_range < right_range && left_range < 2.0f) {
-      //     #ifdef DEBUG
-      //     printf("left_range: %f right_range: %f \n", left_range,right_range);
-      //     #endif
-      //     direction = -1.0f;
-      //   } else if (left_range > right_range && right_range < 2.0f) {
-      //     direction = 1.0f;
+      } else {
+        if (left_range < right_range && left_range < 2.0f) {
+          #ifdef DEBUG
+          printf("left_range: %f right_range: %f \n", left_range,right_range);
+          #endif
+          direction = -1.0f;
+        } else if (left_range > right_range && right_range < 2.0f) {
+          direction = 1.0f;
 
-      //   } else if (left_range > 2.0f && right_range > 2.0f) {
-      //     direction = 1.0f;
-      //   } else {
+        } else if (left_range > 2.0f && right_range > 2.0f) {
+          direction = 1.0f;
+        } else {
 
-      //   }
-      // }
+        }
+      }
 
       pos_x_hit = current_pos_x;
       pos_y_hit = current_pos_y;

@@ -29,7 +29,8 @@
 
 #include <math.h>
 #include <stdio.h>
-
+#include <string.h>
+#include <stdint.h>
 #include <webots/camera.h>
 #include <webots/distance_sensor.h>
 #include <webots/gps.h>
@@ -47,15 +48,39 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <pid_controller.h>
+#include <webots/pen.h>
 
-
-#define FLYING_ALTITUDE 0.3
-#define MAX_SPEED 0.3
-#define LEFT_WALL_DISTANCE 0.3
-#define RIGHT_WALL_DISTANCE 0.7
+#define FLYING_ALTITUDE 0.4
+#define MAX_SPEED 0.4
+#define LEFT_WALL_DISTANCE 0.6
+#define RIGHT_WALL_DISTANCE 1.2
 // #define DESIRED_HEADING_ANGLE -0.5
 #define HEADING_INCREMENT 3
 #define NUM_OF_DRONES 3
+#define FIRST_DRONE_ID 11
+
+
+void log_drone_path(const char *robot_name,double x, double y) {
+    // Define a buffer to store the dynamic file name
+    char filename[100]; // Adjust size if necessary
+    
+    // Create the dynamic file name using sprintf
+    sprintf(filename, "/home/yanyew/webots_sim/path logs/%s_drone_path.csv", robot_name);
+    
+    // Open the file with the dynamically generated name
+    FILE *file = fopen(filename, "a");
+    
+    if (file == NULL) {
+        printf("Error opening file: %s\n", filename);
+        return;
+    }
+
+    // Write data to the file (example data)
+    fprintf(file, "%f,%f\n",x,y);
+
+    // Close the file after writing
+    fclose(file);
+}
 
 float degrees_to_radians(float degrees) {
     return degrees * (3.14159265358979323846f / 180.0f);
@@ -70,15 +95,23 @@ float rssi_angle;
 int state_wf;
 float range_front_value, range_back_value, range_left_value, range_right_value;
 
-static float heading[3] = { 60.0f, 0.0f, -60.0f };
+static float pref_heading[9] = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f};
+static float direction_arr[9] = { -1, -1, -1, +1, +1, +1, -1, -1, -1 };
+// static float heading[3] = { 60.0f, 0.0f, -60.0f };
+
 
 int main(int argc, char **argv) {
   wb_robot_init();
+  
 
   const int timestep = (int)wb_robot_get_basic_time_step();
   const char *robot_name = wb_robot_get_name();
-  int robot_id = atoi(robot_name);
-  printf("Robot id: %d\n", robot_id);
+  
+
+  int name_length = strlen(robot_name);
+  int robot_id = atoi(&robot_name[name_length - 2])-FIRST_DRONE_ID;
+
+  // printf("Robot id: %d\n", robot_id);
   // Initialize motors
   WbDeviceTag m1_motor = wb_robot_get_device("m1_motor");
   wb_motor_set_position(m1_motor, INFINITY);
@@ -112,45 +145,32 @@ int main(int argc, char **argv) {
   wb_distance_sensor_enable(range_back, timestep);
   WbDeviceTag range_right = wb_robot_get_device("range_right");
   wb_distance_sensor_enable(range_right, timestep);
+  float get_bearing_in_rad(){
+    double yaw = wb_inertial_unit_get_roll_pitch_yaw(imu)[2];
+    // printf("Bearing: %f\n", -yaw);
+    return yaw;
+  }
 
-  
-  // float desired_angle = (3.14/2) - ((robot_id % HEADING_INCREMENT) * 3.14 / HEADING_INCREMENT );
-  float desired_angle = degrees_to_radians(heading[robot_id-1]);
 
-  printf("robot desired angle: %f\n", desired_angle);
-  printf("robot_id mod 2 = %d\n", robot_id % 2);
-  // float direction = (robot_id % 2 == 1) ? -1 : 1;
-  float direction;
+
+  float direction = direction_arr[robot_id];
   float wall_distance;
-  if (robot_id == 1){
-    direction = -1;
+  if (direction == -1){
     wall_distance = LEFT_WALL_DISTANCE;
   }
-  else if (robot_id == 2){
-    direction = 1;
-    wall_distance = RIGHT_WALL_DISTANCE;
-  }
   else {
-    direction = 1;
     wall_distance = RIGHT_WALL_DISTANCE;
   }
-
-  printf("robot direction: %f\n", direction);
-  // Initialize SGBA controller
-  if (robot_id % 2 == 1){
-    init_SGBA_controller(wall_distance, MAX_SPEED, desired_angle, direction);
-  } else {
-    init_SGBA_controller(wall_distance, MAX_SPEED, desired_angle, direction);
-  }         
-  // if (robot_id % 2 == 1){
-  //   init_SGBA_controller(LEFT_WALL_DISTANCE, MAX_SPEED, desired_angle, direction);
-  // } else {
-  //   init_SGBA_controller(RIGHT_WALL_DISTANCE, MAX_SPEED, desired_angle, direction);
-  // }       
+     
 
   // Wait for 2 seconds
   while (wb_robot_step(timestep) != -1) {
-    if (wb_robot_get_time() > 2.0)
+    if (robot_id == 3 || robot_id == 4 || robot_id == 5 || robot_id == 6 || robot_id == 7 || robot_id == 8){
+      if (wb_robot_get_time() > 20.0){
+        break;
+      }
+    }
+    else if (wb_robot_get_time() > 2.0)
       break;
   }
 
@@ -189,17 +209,19 @@ int main(int argc, char **argv) {
   // printf("- Use Q and E to rotate around yaw\n ");
   // printf("- Use W and S to go up and down\n");
 
-  double get_bearing_in_rad(){
-    double yaw = wb_inertial_unit_get_roll_pitch_yaw(imu)[2];
-    // printf("Bearing: %f\n", -yaw);
-    return yaw;
-  }
-
+  bool hasRunOnce = false;
   while (wb_robot_step(timestep) != -1) {
-    // const unsigned char *image = wb_camera_get_image(camera);
 
+    // const unsigned char *image = wb_camera_get_image(camera);
+    if (hasRunOnce == false){
+        // Initialize SGBA controller
+      double desired_angle = get_bearing_in_rad() + (pref_heading[robot_id]);
+      printf("Desired Angle: %f", desired_angle);
+      init_SGBA_controller(wall_distance, MAX_SPEED, desired_angle, direction);
+      hasRunOnce = true;
+    }
     const double dt = wb_robot_get_time() - past_time;
-    printf("Time %f\n", wb_robot_get_time());
+    // printf("Time %f\n", wb_robot_get_time());
     // Get measurements
     actual_state.roll = wb_inertial_unit_get_roll_pitch_yaw(imu)[0];
     actual_state.pitch = wb_inertial_unit_get_roll_pitch_yaw(imu)[1];
@@ -213,7 +235,7 @@ int main(int argc, char **argv) {
     double vx_global = (x_global - past_x_global) / dt;
     double y_global = wb_gps_get_values(gps)[1];
     double vy_global = (y_global - past_y_global) / dt;
-    printf("Range front: %f,\tRange Left: %f,\tRange Right: %f, Range back:%f\n",range_front_value, range_left_value, range_right_value, range_back_value);
+    // printf("Range front: %f,\tRange Left: %f,\tRange Right: %f, Range back:%f\n",range_front_value, range_left_value, range_right_value, range_back_value);
     // Get body fixed velocities
     double actualYaw = wb_inertial_unit_get_roll_pitch_yaw(imu)[2];
     double cosyaw = cos(actualYaw);
@@ -221,6 +243,8 @@ int main(int argc, char **argv) {
     actual_state.vx = vx_global * cosyaw + vy_global * sinyaw;
     actual_state.vy = -vx_global * sinyaw + vy_global * cosyaw;
 
+    // fprintf(file, "%f,%f\n", x_global, y_global);
+    log_drone_path(robot_name,x_global, y_global);
     // Initialize values
     desired_state.roll = 0;
     desired_state.pitch = 0;
@@ -235,38 +259,6 @@ int main(int argc, char **argv) {
     double height_diff_desired = 0;
 
     double heading = get_bearing_in_rad();
-
-    // Control altitude
-    // int key = wb_keyboard_get_key();
-    // while (key > 0) {
-    //   switch (key) {
-    //     case WB_KEYBOARD_UP:
-    //       forward_desired = +0.5;
-    //       break;
-    //     case WB_KEYBOARD_DOWN:
-    //       forward_desired = -0.5;
-    //       break;
-    //     case WB_KEYBOARD_RIGHT:
-    //       sideways_desired = -0.5;
-    //       break;
-    //     case WB_KEYBOARD_LEFT:
-    //       sideways_desired = +0.5;
-    //       break;
-    //     case 'Q':
-    //       yaw_desired = 1.0;
-    //       break;
-    //     case 'E':
-    //       yaw_desired = -1.0;
-    //       break;
-    //     case 'W':
-    //       height_diff_desired = 0.1;
-    //       break;
-    //     case 'S':
-    //       height_diff_desired = -0.1;
-    //       break;
-    //   }
-    //   key = wb_keyboard_get_key();
-    // }
     
     int state = SGBA_controller(&vel_x, &vel_y, &vel_w, &rssi_angle, &state_wf,
                     range_front_value, range_left_value, range_right_value, range_back_value,
@@ -283,9 +275,9 @@ int main(int argc, char **argv) {
     //                 // rssi
     //                 60,60,0.0, 
     //                 false, true);
-    printf("State = %d, Vel_X = %f, Vel_Y = %f, Vel_W = %f\n", state, vel_x,vel_y,vel_w);
+    // printf("State = %d, Vel_X = %f, Vel_Y = %f, Vel_W = %f\n", state, vel_x,vel_y,vel_w);
     
-    printf("Heading: %f,\tx_pos: %f,\ty_pos: %f,\tz_pos: %f,\t",heading, x_global,y_global,actual_state.altitude);
+    // printf("Heading: %f,\tx_pos: %f,\ty_pos: %f,\tz_pos: %f,\t",heading, x_global,y_global,actual_state.altitude);
     height_desired += height_diff_desired * dt;
 
     // Example how to get sensor data
@@ -298,10 +290,11 @@ int main(int argc, char **argv) {
     // desired_state.vy = vel_y;
     // desired_state.vx = vel_x;
     desired_state.altitude = height_desired;
-    printf("Height difff: %f", height_desired-actual_state.altitude);
+    // printf("Height difff: %f", height_desired-actual_state.altitude);
     ///////////////////////////////////////////////////
+
     if (height_desired-actual_state.altitude > 0.02){
-      printf("Taking off...\n");
+      // printf("Taking off...\n");
       desired_state.yaw_rate = yaw_desired;
       desired_state.vy = sideways_desired;
       desired_state.vx = forward_desired;
@@ -316,22 +309,24 @@ int main(int argc, char **argv) {
     // }
     ///turn to find wall (does not have vel_w)
     else if ((state_wf==4 && state==3)){
-      printf("Loop 2\n");
+      // printf("Loop 2\n");
       desired_state.vx = vel_x;
       desired_state.vy = vel_y;
       desired_state.yaw_rate = direction * MAX_SPEED;   
     }   
     else{
-      printf("Loop 3\n");
+      // printf("Loop 3\n");
       desired_state.vx = vel_x;
       desired_state.vy =  vel_y;
       desired_state.yaw_rate = vel_w;
     }
+  
+    
     ///////////////////////////////////////////////////
     pid_velocity_fixed_height_controller(actual_state, &desired_state, gains_pid, dt, &motor_power);
 
     // Setting motorspeed
-    printf("m1_motor: %f,\t m2_motor: %f,\t m3_motor: %f,\t m4_motor: %f\n\n\n\n", motor_power.m1, motor_power.m2, motor_power.m3, motor_power.m4);
+    // printf("m1_motor: %f,\t m2_motor: %f,\t m3_motor: %f,\t m4_motor: %f\n\n\n\n", motor_power.m1, motor_power.m2, motor_power.m3, motor_power.m4);
     // motor_power.m1 = min(motor_power.m1,600);
     // motor_power.m2 = min(motor_power.m2,600);
     // motor_power.m3 = min(motor_power.m3,600);
@@ -347,7 +342,7 @@ int main(int argc, char **argv) {
     past_y_global = y_global;
     // printf("\n\n");
   };
-
+  // fclose(file);
   wb_robot_cleanup();
 
   return 0;
