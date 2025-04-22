@@ -1,27 +1,43 @@
-# webots_sim
-## SGBA simulation 
-1) Run the teste_puck.wbt world project
-2) Choose the SGBA_Controller for the Khepera IV robot if not already chosen
+# Webots_CF
 
-![image](https://github.com/TL-NUS-CFS/webots_sim/assets/77558792/5047ae5b-c01c-4eaa-9474-fb7a5c3d2ec9)
+A simulation framework for quadcopters using the Crazyflie platform within the Webots environment.
+![image](RUN%201,%20SAFMC%201%20CONFIG%201.png) 
 
-## Outstanding bugs
+## Overview
 
-* Some of the below bugs are because of the way the motor activation is coded. Need to amend the motor activation to better reflect the intended action of SGBA algorithm.  
- * Crashes if encounter wall at an angle
- * If lose wall, will keep turning indefinitely (also behaviour observed IRL) (see closer)
- * Turning is not optimal (also due to being non holonomic)
- * Sometimes will get stuck at wall due to crash
- * ~~Often loses corner when turning around wall~~
- * going forward, if near side wall, it will think it is encountering wall at angle
- * too many magic numbers
- * some hard coded 0.8 turns are messing up angled turns
+This repository provides a simulation environment for the Crazyflie quadcopter using Webots. It was originally developed to support the development and optimization of the Swarm Gradient Bug Algorithm (SGBA) in simulation before deployment on real hardware.
 
-## To be implemented
-* Loop detection + Reheading
-* ~~Dynamic desired heading~~
-* ~~Clockwise/AntiClockwise WallFollowing~~ + CA Highway
+## Features
 
+- Accurate simulation of Crazyflie quadcopter dynamics
+- Integration with Webots for 3D visualization and physics
+- Modular controller structure for easy algorithm testing
+- Basic wall-following and autonomous behaviors
+- Realistic sensor feedback (e.g., flow deck, multiranger)
 
-## To be checked
-* Simulation, distance, robot scale
+## Getting Started
+
+### Prerequisites
+
+- [Webots](https://cyberbotics.com/) (tested with version 2025a)
+- Python (recommended 3.8+)
+- Python packages: `pandas`, `matplotlib`
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/CDE-4301-ASI-401/Webots_CF.git
+
+   ```
+2. Open Webots and load the desired .wbt file from the worlds/ directory.
+
+### Usage
+1. Launch Webots and open the desired .wbt file (e.g., CompetitionLayout.wbt).
+2. Assign a controller to each drone (e.g., SGBA_controller).
+3. Start the simulation — the positions of each drone will be saved in the path_logs/ folder. 
+4. To visualize the paths:
+- Open plotter.ipynb in the path_visualization/ folder.
+- Update the notebook to point to the correct drone IDs and file paths.
+- Since the paths are plotted on a top-down image of the arena, you may need to generate your own image and set the correct path to it in the notebook.
