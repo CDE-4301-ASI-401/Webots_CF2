@@ -3,6 +3,8 @@
     "files.associations": {
         "pid_controller.h": "c",
         "stdlib.h": "c",
-        "sgba.h": "c"
+        "sgba.h": "c",
+        "time.h": "c",
+        "wallfollowing_multiranger_onboard.h": "c"
     }
 }

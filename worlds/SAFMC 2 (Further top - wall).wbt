@@ -1,0 +1,2056 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.009146206665487933 0.9998509770784935 0.014641398116781217 1.1171831380813129
+  position -3.2424937124420654 15.262778276726092 18.034657927763124
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+  castShadows FALSE
+}
+RectangleArena {
+  translation 10 10 0
+  floorSize 20 20
+  floorTileSize 2 2
+  wallHeight 1.5
+}
+DEF S1 Solid {
+  translation 7 19.45 0
+  rotation 0 0 1 1.01503e-06
+  children [
+    Solid {
+      translation 0 0 1.2
+      children [
+        Shape {
+          appearance PBRAppearance {
+            roughness 1
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/roughcast/roughcast_normal.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+          geometry Box {
+            size 0.2 5 2.4
+          }
+        }
+      ]
+      boundingObject Box {
+        size 0.2 5 2.4
+      }
+    }
+  ]
+  name "wall"
+  model "wall"
+}
+DEF S2 Solid {
+  translation 17.11 10.37 0
+  rotation 0 0 1 3.14159
+  children [
+    Solid {
+      translation 0 0 1.2
+      children [
+        Shape {
+          appearance PBRAppearance {
+            roughness 1
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/roughcast/roughcast_normal.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+          geometry Box {
+            size 0.2 3 2.4
+          }
+        }
+      ]
+      boundingObject Box {
+        size 0.2 3 2.4
+      }
+    }
+  ]
+  name "wall(1)"
+  model "wall"
+}
+DEF L1_2 Solid {
+  translation 17 4.5 0
+  rotation 0 0 1 3.14159
+  children [
+    Solid {
+      translation 0 0 1.2
+      children [
+        Shape {
+          appearance PBRAppearance {
+            roughness 1
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/roughcast/roughcast_normal.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+          geometry Box {
+            size 0.2 5 2.4
+          }
+        }
+      ]
+      boundingObject Box {
+        size 0.2 5 2.4
+      }
+    }
+  ]
+  name "wall(5)"
+  model "wall"
+}
+DEF L1_1 Solid {
+  translation 14 16.25 0
+  rotation 0 0 1 1.01503e-06
+  children [
+    Solid {
+      translation 0 0 1.2
+      children [
+        Shape {
+          appearance PBRAppearance {
+            roughness 1
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/roughcast/roughcast_normal.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+          geometry Box {
+            size 0.2 1.5 2.4
+          }
+        }
+      ]
+      boundingObject Box {
+        size 0.2 1.5 2.4
+      }
+    }
+  ]
+  name "wall(2)"
+  model "wall"
+}
+DEF L1_2 Solid {
+  translation 11.5 15.5 0
+  rotation 0 0 1 -1.5707953071795862
+  children [
+    Solid {
+      translation 0 0 1.2
+      children [
+        Shape {
+          appearance PBRAppearance {
+            roughness 1
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/roughcast/roughcast_normal.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+          geometry Box {
+            size 0.2 5 2.4
+          }
+        }
+      ]
+      boundingObject Box {
+        size 0.2 5 2.4
+      }
+    }
+  ]
+  name "wall(3)"
+  model "wall"
+}
+DEF L2_1 Solid {
+  translation 18.5 7 0
+  rotation 0 0 1 -1.5707953071795862
+  children [
+    Solid {
+      translation 0 0 1.2
+      children [
+        Shape {
+          appearance PBRAppearance {
+            roughness 1
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/roughcast/roughcast_normal.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+          geometry Box {
+            size 0.2 3 2.4
+          }
+        }
+      ]
+      boundingObject Box {
+        size 0.2 3 2.4
+      }
+    }
+  ]
+  name "wall(4)"
+  model "wall"
+}
+DEF unknown_area RectangleArena {
+  translation 11.14 8.04 0.1
+  name "rectangle arena(1)"
+  floorSize 8 8
+  floorTileSize 16 16
+  wallHeight 1.5
+}
+DEF takeoff_boundary Wall {
+  translation 6 10 0
+  rotation 0 0 1 3.14159
+  name "wall(6)"
+  size 0.2 20 0.1
+}
+DEF CF11 Robot {
+  translation 5.71386 13.0344 0.0150198
+  rotation 2.055419999745157e-06 1.5612399998064282e-05 -0.9999999998760141 -0.261795307179586
+  children [
+    Pen {
+      name "pen(1)"
+    }
+    DEF BODY Pose {
+      translation 0 0 -0.015
+      children [
+        Group {
+          children [
+            Pen {
+            }
+          ]
+        }
+        CadShape {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/meshes/cf2_assembly.dae"
+          ]
+        }
+      ]
+    }
+    DEF MULTIRANGER Pose {
+      translation 0 0 0.01
+      children [
+        DistanceSensor {
+          rotation 0 0 1 -1.57
+          name "range_right"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          rotation 0 0 1 3.14
+          name "range_back"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          rotation 0 0 1 1.57
+          name "range_left"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          name "range_front"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+      ]
+    }
+    Camera {
+      translation 0.03 0 0.01
+      fieldOfView 0.87
+      width 324
+      height 324
+    }
+    GPS {
+    }
+    Gyro {
+    }
+    InertialUnit {
+      name "inertial_unit"
+    }
+    DEF M1 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust 0.031 -0.031 0.008
+      thrustConstants -4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m1_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation 0.031 -0.031 0.008
+        children [
+          DEF FASTHELIX Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.1 0.1
+              baseColorMap ImageTexture {
+                url [
+                  "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/default/protos/textures/fast_helix.png"
+                ]
+              }
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.001
+              radius 0.025
+            }
+          }
+        ]
+      }
+      slowHelix Solid {
+        translation 0.031 -0.031 0.008
+        children [
+          DEF PROP_SHAPE Shape {
+            appearance DEF PLASTIC PBRAppearance {
+              baseColor 0 0 0
+              metalness 0.3
+            }
+            geometry Mesh {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/meshes/ccw_prop.dae"
+              ]
+            }
+          }
+        ]
+      }
+    }
+    DEF M2 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust -0.031 -0.031 0.008
+      thrustConstants 4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m2_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation -0.031 -0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix Solid {
+        translation -0.031 -0.031 0.008
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+    DEF M3 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust -0.031 0.031 0.008
+      thrustConstants -4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m3_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation -0.031 0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix Solid {
+        translation -0.031 0.031 0.008
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+    DEF M4 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust 0.031 0.031 0.008
+      thrustConstants 4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m4_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation 0.031 0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix DEF PROP Solid {
+        translation 0.031 0.031 0.007
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+  ]
+  name "CF11"
+  model "Bitcraze's Crazyflie"
+  boundingObject Cylinder {
+    height 0.03
+    radius 0.05
+  }
+  physics Physics {
+    density -1
+    mass 0.05
+  }
+  controller "SGBA_Controller"
+}
+DEF CF12 Robot {
+  translation 5.27507 11.4323 0.0150182
+  rotation 1.6306999999676333e-06 6.085859999879206e-06 -0.9999999999801517 -0.523595307179586
+  children [
+    DEF BODY Pose {
+      translation 0 0 -0.015
+      children [
+        Group {
+          children [
+            Pen {
+            }
+          ]
+        }
+        CadShape {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/meshes/cf2_assembly.dae"
+          ]
+        }
+      ]
+    }
+    DEF MULTIRANGER Pose {
+      translation 0 0 0.01
+      children [
+        DistanceSensor {
+          rotation 0 0 1 -1.57
+          name "range_right"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          rotation 0 0 1 3.14
+          name "range_back"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          rotation 0 0 1 1.57
+          name "range_left"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          name "range_front"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+      ]
+    }
+    Camera {
+      translation 0.03 0 0.01
+      fieldOfView 0.87
+      width 324
+      height 324
+    }
+    GPS {
+    }
+    Gyro {
+    }
+    InertialUnit {
+      name "inertial_unit"
+    }
+    DEF M1 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust 0.031 -0.031 0.008
+      thrustConstants -4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m1_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation 0.031 -0.031 0.008
+        children [
+          DEF FASTHELIX Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.1 0.1
+              baseColorMap ImageTexture {
+                url [
+                  "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/default/protos/textures/fast_helix.png"
+                ]
+              }
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.001
+              radius 0.025
+            }
+          }
+        ]
+      }
+      slowHelix Solid {
+        translation 0.031 -0.031 0.008
+        children [
+          DEF PROP_SHAPE Shape {
+            appearance DEF PLASTIC PBRAppearance {
+              baseColor 0 0 0
+              metalness 0.3
+            }
+            geometry Mesh {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/meshes/ccw_prop.dae"
+              ]
+            }
+          }
+        ]
+      }
+    }
+    DEF M2 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust -0.031 -0.031 0.008
+      thrustConstants 4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m2_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation -0.031 -0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix Solid {
+        translation -0.031 -0.031 0.008
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+    DEF M3 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust -0.031 0.031 0.008
+      thrustConstants -4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m3_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation -0.031 0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix Solid {
+        translation -0.031 0.031 0.008
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+    DEF M4 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust 0.031 0.031 0.008
+      thrustConstants 4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m4_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation 0.031 0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix DEF PROP Solid {
+        translation 0.031 0.031 0.007
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+  ]
+  name "CF12"
+  model "Bitcraze's Crazyflie"
+  boundingObject Cylinder {
+    height 0.03
+    radius 0.05
+  }
+  physics Physics {
+    density -1
+    mass 0.05
+  }
+  controller "SGBA_Controller"
+}
+DEF CF13 Robot {
+  translation 4.43395 9.94279 0.0150135
+  rotation -2.6101699999391365e-06 6.310539999852852e-06 -0.9999999999766822 -0.7854053071795866
+  children [
+    DEF BODY Pose {
+      translation 0 0 -0.015
+      children [
+        Group {
+          children [
+            Pen {
+            }
+          ]
+        }
+        CadShape {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/meshes/cf2_assembly.dae"
+          ]
+        }
+      ]
+    }
+    DEF MULTIRANGER Pose {
+      translation 0 0 0.01
+      children [
+        DistanceSensor {
+          rotation 0 0 1 -1.57
+          name "range_right"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          rotation 0 0 1 3.14
+          name "range_back"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          rotation 0 0 1 1.57
+          name "range_left"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          name "range_front"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+      ]
+    }
+    Camera {
+      translation 0.03 0 0.01
+      fieldOfView 0.87
+      width 324
+      height 324
+    }
+    GPS {
+    }
+    Gyro {
+    }
+    InertialUnit {
+      name "inertial_unit"
+    }
+    DEF M1 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust 0.031 -0.031 0.008
+      thrustConstants -4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m1_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation 0.031 -0.031 0.008
+        children [
+          DEF FASTHELIX Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.1 0.1
+              baseColorMap ImageTexture {
+                url [
+                  "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/default/protos/textures/fast_helix.png"
+                ]
+              }
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.001
+              radius 0.025
+            }
+          }
+        ]
+      }
+      slowHelix Solid {
+        translation 0.031 -0.031 0.008
+        children [
+          DEF PROP_SHAPE Shape {
+            appearance DEF PLASTIC PBRAppearance {
+              baseColor 0 0 0
+              metalness 0.3
+            }
+            geometry Mesh {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/meshes/ccw_prop.dae"
+              ]
+            }
+          }
+        ]
+      }
+    }
+    DEF M2 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust -0.031 -0.031 0.008
+      thrustConstants 4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m2_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation -0.031 -0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix Solid {
+        translation -0.031 -0.031 0.008
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+    DEF M3 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust -0.031 0.031 0.008
+      thrustConstants -4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m3_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation -0.031 0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix Solid {
+        translation -0.031 0.031 0.008
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+    DEF M4 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust 0.031 0.031 0.008
+      thrustConstants 4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m4_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation 0.031 0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix DEF PROP Solid {
+        translation 0.031 0.031 0.007
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+  ]
+  name "CF13"
+  model "Bitcraze's Crazyflie"
+  boundingObject Cylinder {
+    height 0.03
+    radius 0.05
+  }
+  physics Physics {
+    density -1
+    mass 0.05
+  }
+  controller "SGBA_Controller"
+}
+DEF CF14 Robot {
+  translation 5.32607 14.8169 0.0150502
+  rotation 1.2386499999033331e-05 1.6307099998727358e-06 -0.9999999999219578 0.261796
+  children [
+    DEF BODY Pose {
+      translation 0 0 -0.015
+      children [
+        Group {
+          children [
+            Pen {
+            }
+          ]
+        }
+        CadShape {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/meshes/cf2_assembly.dae"
+          ]
+        }
+      ]
+    }
+    DEF MULTIRANGER Pose {
+      translation 0 0 0.01
+      children [
+        DistanceSensor {
+          rotation 0 0 1 -1.57
+          name "range_right"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          rotation 0 0 1 3.14
+          name "range_back"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          rotation 0 0 1 1.57
+          name "range_left"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          name "range_front"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+      ]
+    }
+    Camera {
+      translation 0.03 0 0.01
+      fieldOfView 0.87
+      width 324
+      height 324
+    }
+    GPS {
+    }
+    Gyro {
+    }
+    InertialUnit {
+      name "inertial_unit"
+    }
+    DEF M1 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust 0.031 -0.031 0.008
+      thrustConstants -4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m1_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation 0.031 -0.031 0.008
+        children [
+          DEF FASTHELIX Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.1 0.1
+              baseColorMap ImageTexture {
+                url [
+                  "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/default/protos/textures/fast_helix.png"
+                ]
+              }
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.001
+              radius 0.025
+            }
+          }
+        ]
+      }
+      slowHelix Solid {
+        translation 0.031 -0.031 0.008
+        children [
+          DEF PROP_SHAPE Shape {
+            appearance DEF PLASTIC PBRAppearance {
+              baseColor 0 0 0
+              metalness 0.3
+            }
+            geometry Mesh {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/meshes/ccw_prop.dae"
+              ]
+            }
+          }
+        ]
+      }
+    }
+    DEF M2 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust -0.031 -0.031 0.008
+      thrustConstants 4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m2_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation -0.031 -0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix Solid {
+        translation -0.031 -0.031 0.008
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+    DEF M3 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust -0.031 0.031 0.008
+      thrustConstants -4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m3_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation -0.031 0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix Solid {
+        translation -0.031 0.031 0.008
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+    DEF M4 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust 0.031 0.031 0.008
+      thrustConstants 4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m4_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation 0.031 0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix DEF PROP Solid {
+        translation 0.031 0.031 0.007
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+  ]
+  name "CF14"
+  model "Bitcraze's Crazyflie"
+  boundingObject Cylinder {
+    height 0.03
+    radius 0.05
+  }
+  physics Physics {
+    density -1
+    mass 0.05
+  }
+  controller "SGBA_Controller"
+}
+DEF CF15 Robot {
+  translation 4.5067 15.6021 0.0150493
+  rotation -4.9621099999284284e-06 -2.0553799999703544e-06 0.9999999999855764 -0.7854053071795866
+  children [
+    DEF BODY Pose {
+      translation 0 0 -0.015
+      children [
+        Group {
+          children [
+            Pen {
+            }
+          ]
+        }
+        CadShape {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/meshes/cf2_assembly.dae"
+          ]
+        }
+      ]
+    }
+    DEF MULTIRANGER Pose {
+      translation 0 0 0.01
+      children [
+        DistanceSensor {
+          rotation 0 0 1 -1.57
+          name "range_right"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          rotation 0 0 1 3.14
+          name "range_back"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          rotation 0 0 1 1.57
+          name "range_left"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          name "range_front"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+      ]
+    }
+    Camera {
+      translation 0.03 0 0.01
+      fieldOfView 0.87
+      width 324
+      height 324
+    }
+    GPS {
+    }
+    Gyro {
+    }
+    InertialUnit {
+      name "inertial_unit"
+    }
+    DEF M1 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust 0.031 -0.031 0.008
+      thrustConstants -4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m1_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation 0.031 -0.031 0.008
+        children [
+          DEF FASTHELIX Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.1 0.1
+              baseColorMap ImageTexture {
+                url [
+                  "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/default/protos/textures/fast_helix.png"
+                ]
+              }
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.001
+              radius 0.025
+            }
+          }
+        ]
+      }
+      slowHelix Solid {
+        translation 0.031 -0.031 0.008
+        children [
+          DEF PROP_SHAPE Shape {
+            appearance DEF PLASTIC PBRAppearance {
+              baseColor 0 0 0
+              metalness 0.3
+            }
+            geometry Mesh {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/meshes/ccw_prop.dae"
+              ]
+            }
+          }
+        ]
+      }
+    }
+    DEF M2 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust -0.031 -0.031 0.008
+      thrustConstants 4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m2_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation -0.031 -0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix Solid {
+        translation -0.031 -0.031 0.008
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+    DEF M3 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust -0.031 0.031 0.008
+      thrustConstants -4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m3_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation -0.031 0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix Solid {
+        translation -0.031 0.031 0.008
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+    DEF M4 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust 0.031 0.031 0.008
+      thrustConstants 4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m4_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation 0.031 0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix DEF PROP Solid {
+        translation 0.031 0.031 0.007
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+  ]
+  name "CF15"
+  model "Bitcraze's Crazyflie"
+  boundingObject Cylinder {
+    height 0.03
+    radius 0.05
+  }
+  physics Physics {
+    density -1
+    mass 0.05
+  }
+  controller "SGBA_Controller"
+}
+DEF CF16 Robot {
+  translation 3.46464 17.0011 0.115048
+  rotation 4.9621099999284284e-06 2.0553799999703544e-06 -0.9999999999855764 0.785406
+  children [
+    DEF BODY Pose {
+      translation 0 0 -0.015
+      children [
+        Group {
+          children [
+            Pen {
+            }
+          ]
+        }
+        CadShape {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/meshes/cf2_assembly.dae"
+          ]
+        }
+      ]
+    }
+    DEF MULTIRANGER Pose {
+      translation 0 0 0.01
+      children [
+        DistanceSensor {
+          rotation 0 0 1 -1.57
+          name "range_right"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          rotation 0 0 1 3.14
+          name "range_back"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          rotation 0 0 1 1.57
+          name "range_left"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          name "range_front"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+      ]
+    }
+    Camera {
+      translation 0.03 0 0.01
+      fieldOfView 0.87
+      width 324
+      height 324
+    }
+    GPS {
+    }
+    Gyro {
+    }
+    InertialUnit {
+      name "inertial_unit"
+    }
+    DEF M1 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust 0.031 -0.031 0.008
+      thrustConstants -4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m1_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation 0.031 -0.031 0.008
+        children [
+          DEF FASTHELIX Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.1 0.1
+              baseColorMap ImageTexture {
+                url [
+                  "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/default/protos/textures/fast_helix.png"
+                ]
+              }
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.001
+              radius 0.025
+            }
+          }
+        ]
+      }
+      slowHelix Solid {
+        translation 0.031 -0.031 0.008
+        children [
+          DEF PROP_SHAPE Shape {
+            appearance DEF PLASTIC PBRAppearance {
+              baseColor 0 0 0
+              metalness 0.3
+            }
+            geometry Mesh {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/meshes/ccw_prop.dae"
+              ]
+            }
+          }
+        ]
+      }
+    }
+    DEF M2 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust -0.031 -0.031 0.008
+      thrustConstants 4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m2_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation -0.031 -0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix Solid {
+        translation -0.031 -0.031 0.008
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+    DEF M3 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust -0.031 0.031 0.008
+      thrustConstants -4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m3_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation -0.031 0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix Solid {
+        translation -0.031 0.031 0.008
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+    DEF M4 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust 0.031 0.031 0.008
+      thrustConstants 4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m4_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation 0.031 0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix DEF PROP Solid {
+        translation 0.031 0.031 0.007
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+  ]
+  name "CF16"
+  model "Bitcraze's Crazyflie"
+  boundingObject Cylinder {
+    height 0.03
+    radius 0.05
+  }
+  physics Physics {
+    density -1
+    mass 0.05
+  }
+  controller "SGBA_Controller"
+}
+DEF CF17 Robot {
+  translation 4.75639 16.6749 0.215046
+  rotation 7.670839999758115e-06 -2.0553999999351866e-06 0.9999999999684668 0.523595
+  children [
+    DEF BODY Pose {
+      translation 0 0 -0.015
+      children [
+        Group {
+          children [
+            Pen {
+            }
+          ]
+        }
+        CadShape {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/meshes/cf2_assembly.dae"
+          ]
+        }
+      ]
+    }
+    DEF MULTIRANGER Pose {
+      translation 0 0 0.01
+      children [
+        DistanceSensor {
+          rotation 0 0 1 -1.57
+          name "range_right"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          rotation 0 0 1 3.14
+          name "range_back"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          rotation 0 0 1 1.57
+          name "range_left"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          name "range_front"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+      ]
+    }
+    Camera {
+      translation 0.03 0 0.01
+      fieldOfView 0.87
+      width 324
+      height 324
+    }
+    GPS {
+    }
+    Gyro {
+    }
+    InertialUnit {
+      name "inertial_unit"
+    }
+    DEF M1 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust 0.031 -0.031 0.008
+      thrustConstants -4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m1_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation 0.031 -0.031 0.008
+        children [
+          DEF FASTHELIX Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.1 0.1
+              baseColorMap ImageTexture {
+                url [
+                  "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/default/protos/textures/fast_helix.png"
+                ]
+              }
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.001
+              radius 0.025
+            }
+          }
+        ]
+      }
+      slowHelix Solid {
+        translation 0.031 -0.031 0.008
+        children [
+          DEF PROP_SHAPE Shape {
+            appearance DEF PLASTIC PBRAppearance {
+              baseColor 0 0 0
+              metalness 0.3
+            }
+            geometry Mesh {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/meshes/ccw_prop.dae"
+              ]
+            }
+          }
+        ]
+      }
+    }
+    DEF M2 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust -0.031 -0.031 0.008
+      thrustConstants 4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m2_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation -0.031 -0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix Solid {
+        translation -0.031 -0.031 0.008
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+    DEF M3 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust -0.031 0.031 0.008
+      thrustConstants -4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m3_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation -0.031 0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix Solid {
+        translation -0.031 0.031 0.008
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+    DEF M4 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust 0.031 0.031 0.008
+      thrustConstants 4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m4_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation 0.031 0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix DEF PROP Solid {
+        translation 0.031 0.031 0.007
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+  ]
+  name "CF17"
+  model "Bitcraze's Crazyflie"
+  boundingObject Cylinder {
+    height 0.03
+    radius 0.05
+  }
+  physics Physics {
+    density -1
+    mass 0.05
+  }
+  controller "SGBA_Controller"
+}
+DEF CF18 Robot {
+  translation 3.90149 17.2275 0.315053
+  rotation -4.962159999928427e-06 2.0553999999703533e-06 -0.9999999999855762 -0.785395307179586
+  children [
+    DEF BODY Pose {
+      translation 0 0 -0.015
+      children [
+        Group {
+          children [
+            Pen {
+            }
+          ]
+        }
+        CadShape {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/meshes/cf2_assembly.dae"
+          ]
+        }
+      ]
+    }
+    DEF MULTIRANGER Pose {
+      translation 0 0 0.01
+      children [
+        DistanceSensor {
+          rotation 0 0 1 -1.57
+          name "range_right"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          rotation 0 0 1 3.14
+          name "range_back"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          rotation 0 0 1 1.57
+          name "range_left"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          name "range_front"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+      ]
+    }
+    Camera {
+      translation 0.03 0 0.01
+      fieldOfView 0.87
+      width 324
+      height 324
+    }
+    GPS {
+    }
+    Gyro {
+    }
+    InertialUnit {
+      name "inertial_unit"
+    }
+    DEF M1 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust 0.031 -0.031 0.008
+      thrustConstants -4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m1_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation 0.031 -0.031 0.008
+        children [
+          DEF FASTHELIX Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.1 0.1
+              baseColorMap ImageTexture {
+                url [
+                  "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/default/protos/textures/fast_helix.png"
+                ]
+              }
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.001
+              radius 0.025
+            }
+          }
+        ]
+      }
+      slowHelix Solid {
+        translation 0.031 -0.031 0.008
+        children [
+          DEF PROP_SHAPE Shape {
+            appearance DEF PLASTIC PBRAppearance {
+              baseColor 0 0 0
+              metalness 0.3
+            }
+            geometry Mesh {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/meshes/ccw_prop.dae"
+              ]
+            }
+          }
+        ]
+      }
+    }
+    DEF M2 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust -0.031 -0.031 0.008
+      thrustConstants 4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m2_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation -0.031 -0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix Solid {
+        translation -0.031 -0.031 0.008
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+    DEF M3 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust -0.031 0.031 0.008
+      thrustConstants -4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m3_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation -0.031 0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix Solid {
+        translation -0.031 0.031 0.008
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+    DEF M4 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust 0.031 0.031 0.008
+      thrustConstants 4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m4_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation 0.031 0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix DEF PROP Solid {
+        translation 0.031 0.031 0.007
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+  ]
+  name "CF18"
+  model "Bitcraze's Crazyflie"
+  boundingObject Cylinder {
+    height 0.03
+    radius 0.05
+  }
+  physics Physics {
+    density -1
+    mass 0.05
+  }
+  controller "SGBA_Controller"
+}
+DEF CF19 Robot {
+  translation 3.03842 17.7086 0.415048
+  rotation -3.5696399999695953e-06 2.0719999999823515e-06 -0.9999999999914824 -1.0471853071795865
+  children [
+    DEF BODY Pose {
+      translation 0 0 -0.015
+      children [
+        Group {
+          children [
+            Pen {
+            }
+          ]
+        }
+        CadShape {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/meshes/cf2_assembly.dae"
+          ]
+        }
+      ]
+    }
+    DEF MULTIRANGER Pose {
+      translation 0 0 0.01
+      children [
+        DistanceSensor {
+          rotation 0 0 1 -1.57
+          name "range_right"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          rotation 0 0 1 3.14
+          name "range_back"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          rotation 0 0 1 1.57
+          name "range_left"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          name "range_front"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+      ]
+    }
+    Camera {
+      translation 0.03 0 0.01
+      fieldOfView 0.87
+      width 324
+      height 324
+    }
+    GPS {
+    }
+    Gyro {
+    }
+    InertialUnit {
+      name "inertial_unit"
+    }
+    DEF M1 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust 0.031 -0.031 0.008
+      thrustConstants -4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m1_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation 0.031 -0.031 0.008
+        children [
+          DEF FASTHELIX Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.1 0.1
+              baseColorMap ImageTexture {
+                url [
+                  "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/default/protos/textures/fast_helix.png"
+                ]
+              }
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.001
+              radius 0.025
+            }
+          }
+        ]
+      }
+      slowHelix Solid {
+        translation 0.031 -0.031 0.008
+        children [
+          DEF PROP_SHAPE Shape {
+            appearance DEF PLASTIC PBRAppearance {
+              baseColor 0 0 0
+              metalness 0.3
+            }
+            geometry Mesh {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/meshes/ccw_prop.dae"
+              ]
+            }
+          }
+        ]
+      }
+    }
+    DEF M2 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust -0.031 -0.031 0.008
+      thrustConstants 4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m2_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation -0.031 -0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix Solid {
+        translation -0.031 -0.031 0.008
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+    DEF M3 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust -0.031 0.031 0.008
+      thrustConstants -4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m3_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation -0.031 0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix Solid {
+        translation -0.031 0.031 0.008
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+    DEF M4 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust 0.031 0.031 0.008
+      thrustConstants 4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m4_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation 0.031 0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix DEF PROP Solid {
+        translation 0.031 0.031 0.007
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+  ]
+  name "CF19"
+  model "Bitcraze's Crazyflie"
+  boundingObject Cylinder {
+    height 0.03
+    radius 0.05
+  }
+  physics Physics {
+    density -1
+    mass 0.05
+  }
+  controller "SGBA_Controller"
+}

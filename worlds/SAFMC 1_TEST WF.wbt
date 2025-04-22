@@ -1,0 +1,441 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.058121255380796946 0.9920206389362458 0.11187927242113652 0.9648694121067584
+  position -3.8245388159032756 2.3662619735517083 14.52342540370803
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+  castShadows FALSE
+}
+RectangleArena {
+  translation 10 10 0
+  floorSize 20 20
+  floorTileSize 2 2
+  wallThickness 0.1
+  wallHeight 1.5
+}
+DEF S1 Solid {
+  translation 7 17.5 0
+  rotation 0 0 1 1.01503e-06
+  children [
+    Solid {
+      translation 0 0 1.2
+      children [
+        Shape {
+          appearance PBRAppearance {
+            roughness 1
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/roughcast/roughcast_normal.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+          geometry Box {
+            size 0.2 5 2.4
+          }
+        }
+      ]
+      boundingObject Box {
+        size 0.2 5 2.4
+      }
+    }
+  ]
+  name "wall"
+  model "wall"
+}
+DEF S2 Solid {
+  translation 18 13 0
+  rotation 0 0 1 3.14159
+  children [
+    Solid {
+      translation 0 0 1.2
+      children [
+        Shape {
+          appearance PBRAppearance {
+            roughness 1
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/roughcast/roughcast_normal.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+          geometry Box {
+            size 0.2 6 2.4
+          }
+        }
+      ]
+      boundingObject Box {
+        size 0.2 6 2.4
+      }
+    }
+  ]
+  name "wall(1)"
+  model "wall"
+}
+DEF L1_2 Solid {
+  translation 17 4.5 0
+  rotation 0 0 1 3.14159
+  children [
+    Solid {
+      translation 0 0 1.2
+      children [
+        Shape {
+          appearance PBRAppearance {
+            roughness 1
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/roughcast/roughcast_normal.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+          geometry Box {
+            size 0.2 5 2.4
+          }
+        }
+      ]
+      boundingObject Box {
+        size 0.2 5 2.4
+      }
+    }
+  ]
+  name "wall(5)"
+  model "wall"
+}
+DEF L1_1 Solid {
+  translation 14 16.25 0
+  rotation 0 0 1 1.01503e-06
+  children [
+    Solid {
+      translation 0 0 1.2
+      children [
+        Shape {
+          appearance PBRAppearance {
+            roughness 1
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/roughcast/roughcast_normal.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+          geometry Box {
+            size 0.2 1.5 2.4
+          }
+        }
+      ]
+      boundingObject Box {
+        size 0.2 1.5 2.4
+      }
+    }
+  ]
+  name "wall(2)"
+  model "wall"
+}
+DEF L1_2 Solid {
+  translation 11.5 15.5 0
+  rotation 0 0 1 -1.5707953071795862
+  children [
+    Solid {
+      translation 0 0 1.2
+      children [
+        Shape {
+          appearance PBRAppearance {
+            roughness 1
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/roughcast/roughcast_normal.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+          geometry Box {
+            size 0.2 5 2.4
+          }
+        }
+      ]
+      boundingObject Box {
+        size 0.2 5 2.4
+      }
+    }
+  ]
+  name "wall(3)"
+  model "wall"
+}
+DEF L2_1 Solid {
+  translation 18.5 7 0
+  rotation 0 0 1 -1.5707953071795862
+  children [
+    Solid {
+      translation 0 0 1.2
+      children [
+        Shape {
+          appearance PBRAppearance {
+            roughness 1
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/roughcast/roughcast_normal.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+          geometry Box {
+            size 0.2 3 2.4
+          }
+        }
+      ]
+      boundingObject Box {
+        size 0.2 3 2.4
+      }
+    }
+  ]
+  name "wall(4)"
+  model "wall"
+}
+DEF unknown_area RectangleArena {
+  translation 11.23 7.34 0.1
+  name "rectangle arena(1)"
+  floorSize 8 8
+  floorTileSize 16 16
+  wallHeight 1.5
+}
+DEF takeoff_boundary Wall {
+  translation 6 10 0
+  rotation 0 0 1 3.14159
+  name "wall(6)"
+  size 0.2 20 0.1
+}
+DEF CF11 Robot {
+  translation 3.98931 1.38961 0.0150134
+  rotation -1.630679999872742e-06 1.2386299999033376e-05 0.9999999999219602 -0.2618053071795865
+  children [
+    Pen {
+      name "pen(1)"
+    }
+    DEF BODY Pose {
+      translation 0 0 -0.015
+      children [
+        Group {
+          children [
+            Pen {
+            }
+          ]
+        }
+        CadShape {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/meshes/cf2_assembly.dae"
+          ]
+        }
+      ]
+    }
+    DEF MULTIRANGER Pose {
+      translation 0 0 0.01
+      children [
+        DistanceSensor {
+          rotation 0 0 1 -1.57
+          name "range_right"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          rotation 0 0 1 3.14
+          name "range_back"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          rotation 0 0 1 1.57
+          name "range_left"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+        DistanceSensor {
+          name "range_front"
+          lookupTable [
+            0 0 0
+            2 2000 0
+          ]
+        }
+      ]
+    }
+    Camera {
+      translation 0.03 0 0.01
+      fieldOfView 0.87
+      width 324
+      height 324
+    }
+    GPS {
+    }
+    Gyro {
+    }
+    InertialUnit {
+      name "inertial_unit"
+    }
+    DEF M1 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust 0.031 -0.031 0.008
+      thrustConstants -4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m1_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation 0.031 -0.031 0.008
+        children [
+          DEF FASTHELIX Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.1 0.1
+              baseColorMap ImageTexture {
+                url [
+                  "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/default/protos/textures/fast_helix.png"
+                ]
+              }
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.001
+              radius 0.025
+            }
+          }
+        ]
+      }
+      slowHelix Solid {
+        translation 0.031 -0.031 0.008
+        children [
+          DEF PROP_SHAPE Shape {
+            appearance DEF PLASTIC PBRAppearance {
+              baseColor 0 0 0
+              metalness 0.3
+            }
+            geometry Mesh {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/meshes/ccw_prop.dae"
+              ]
+            }
+          }
+        ]
+      }
+    }
+    DEF M2 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust -0.031 -0.031 0.008
+      thrustConstants 4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m2_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation -0.031 -0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix Solid {
+        translation -0.031 -0.031 0.008
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+    DEF M3 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust -0.031 0.031 0.008
+      thrustConstants -4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m3_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation -0.031 0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix Solid {
+        translation -0.031 0.031 0.008
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+    DEF M4 Propeller {
+      shaftAxis 0 0 1
+      centerOfThrust 0.031 0.031 0.008
+      thrustConstants 4e-05 0
+      torqueConstants 2.4e-06 0
+      fastHelixThreshold 50
+      device RotationalMotor {
+        name "m4_motor"
+        maxVelocity 600
+        maxTorque 30
+      }
+      fastHelix Solid {
+        translation 0.031 0.031 0.008
+        children [
+          USE FASTHELIX
+        ]
+      }
+      slowHelix DEF PROP Solid {
+        translation 0.031 0.031 0.007
+        children [
+          USE PROP_SHAPE
+        ]
+      }
+    }
+  ]
+  name "CF11"
+  model "Bitcraze's Crazyflie"
+  boundingObject Cylinder {
+    height 0.03
+    radius 0.05
+  }
+  physics Physics {
+    density -1
+    mass 0.05
+  }
+  controller "WF_Controller"
+}
