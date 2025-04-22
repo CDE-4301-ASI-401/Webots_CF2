@@ -5,7 +5,7 @@ sceneTreePerspectives: 000000ff00000001000000030000001c000001a800000126010000000
 maximizedDockId: -1
 centralWidgetVisible: 1
 orthographicViewHeight: 1
-textFiles: 0 "controllers/SGBA_Controller/SGBA_Controller.c"
+textFiles: 0 "../../../../../webots_sim/controllers/SGBA_Controller/SGBA_Controller.c"
 consoles: Console:All:All
 renderingDevicePerspectives: Khepera IV(1):camera;0;0.895833;0;0
 renderingDevicePerspectives: Khepera IV(2):camera;0;0.895833;0;0
